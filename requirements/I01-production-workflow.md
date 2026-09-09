@@ -80,11 +80,11 @@ By the end of the guided portion:
 - [x] A public `my-platform` repository exists on GitHub.
 - [x] GitHub CLI is installed and authenticated.
 - [x] The local repository is connected to GitHub as `origin`.
-- [ ] Local `main` has been pushed to GitHub.
-- [ ] A GitHub ruleset protects `main`.
-- [ ] The first project branch has been created.
-- [ ] The initial repository structure has been created.
-- [ ] This assignment has been copied into `requirements/I01-production-workflow.md`.
+- [x] Local `main` has been pushed to GitHub.
+- [x] A GitHub ruleset protects `main`.
+- [x] The first project branch has been created.
+- [x] The initial repository structure has been created.
+- [x] This assignment has been copied into `requirements/I01-production-workflow.md`.
 
 You may refer to the course slides and setup notes for exact commands.
 
