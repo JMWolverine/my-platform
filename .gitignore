@@ -1,3 +1,4 @@
+# Java
 # Compiled class files
 *.class
 
@@ -15,8 +16,6 @@
 
 # Build directories
 /bin/
-/build/
-/out/
 
 # Maven
 target/
