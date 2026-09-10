@@ -346,10 +346,10 @@ You may use this wording directly or edit it to better describe your actual work
 
 After merging:
 
-- [ ] Reviewed the Markdown files, verified the documented repository paths, and confirmed that the README accurately reflects the current project state.
-- [ ] Pull Request 3 has been merged.
-- [ ] Local `main` has been updated.
-- [ ] The completed branch has been cleaned up.
+- [x] Reviewed the Markdown files, verified the documented repository paths, and confirmed that the README accurately reflects the current project state.
+- [x] Pull Request 3 has been merged.
+- [x] Local `main` has been updated.
+- [x] The completed branch has been cleaned up.
 
 ---
 
