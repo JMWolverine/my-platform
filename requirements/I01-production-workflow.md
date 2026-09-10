@@ -199,10 +199,10 @@ You do not need a separate Linux installation of VS Code. VS Code can run in Win
 Before committing:
 
 - [x] Review the contents of `.gitignore`.
-- [ ] Inspect `git status`.
-- [ ] Verify that only the intended changes will be committed.
-- [ ] Commit with an appropriate descriptive message.
-- [ ] Push the branch to GitHub.
+- [x] Inspect `git status`.
+- [x] Verify that only the intended changes will be committed.
+- [x] Commit with an appropriate descriptive message.
+- [x] Push the branch to GitHub.
 
 ---
 
