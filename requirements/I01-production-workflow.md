@@ -152,10 +152,10 @@ After the PR is merged:
 3. Delete the completed local branch.
 4. Delete the completed remote branch.
 
-- [ ] Verified the expected directories and files locally and reviewed the repository state before committing.
-- [ ] Pull Request 1 has been merged.
-- [ ] Local `main` has been updated.
-- [ ] The completed branch has been cleaned up.
+- [x] Verified the expected directories and files locally and reviewed the repository state before committing.
+- [x] Pull Request 1 has been merged.
+- [x] Local `main` has been updated.
+- [x] The completed branch has been cleaned up.
 
 ---
 
@@ -198,7 +198,7 @@ You do not need a separate Linux installation of VS Code. VS Code can run in Win
 
 Before committing:
 
-- [ ] Review the contents of `.gitignore`.
+- [x] Review the contents of `.gitignore`.
 - [ ] Inspect `git status`.
 - [ ] Verify that only the intended changes will be committed.
 - [ ] Commit with an appropriate descriptive message.
