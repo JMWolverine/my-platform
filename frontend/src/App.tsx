@@ -1,4 +1,5 @@
 import './App.css'
+import snoopy from './assets/SnoopGitHub.png'
 
 function App() {
 
@@ -6,9 +7,10 @@ function App() {
     <>
       <div>
         <h2>JacqMarr's portfolio </h2>
-        <img src="./assets/SnoopyGitHub.png" alt="Snoopy GitHub"/>
-        <h4>Welcome to my portfolio. I am a senior at Grove City College. After college I will be working as a full stack software engineer.</h4>
-        <h1>Outside of programming, I enjoy playing tennis and volunteering as a tutor.</h1>
+        <img src={snoopy} className="base" alt="Snoopy GitHub"/>
+        <h1>Welcome to my portfolio. </h1>
+        <h2>I am a senior at Grove City College. After college I will be working as a full stack software engineer.</h2>
+        <h4>Outside of programming, I enjoy playing tennis and volunteering as a tutor.</h4>
       </div>
     </>
   )
