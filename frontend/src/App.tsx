@@ -1,10 +1,22 @@
 import './App.css'
 import snoopy from './assets/SnoopGitHub.png'
 
+type ReportKind = 'bug' | 'feature'
+type Report = {
+id: string
+text: string
+kind: ReportKind
+};
+
 function App() {
+  const sampleReport: Report = {
+    id: '1',
+    text: 'Navigation link is broken',
+    kind: 'bug',
+  };
 
   return (
-    <>
+    <main>
       <div>
         <h2>JacqMarr's Portfolio</h2>
         <img src={snoopy} className="base" alt="Snoopy GitHub"/>
@@ -12,8 +24,12 @@ function App() {
         <h2>I am a senior at Grove City College. After college I will be working as a full stack software engineer.</h2>
         <h4>Outside of programming, I enjoy playing tennis and volunteering as a tutor.</h4>
         <p>This is a test paragraph.</p>
+        <section className="report-board">
+        <h2>Bugs & Feature Requests</h2>
+        <p>{sampleReport.text} ({sampleReport.kind})</p>
+        </section>
       </div>
-    </>
+    </main>
   )
 }
 
