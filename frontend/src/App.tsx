@@ -6,17 +6,17 @@ type Report = {
 id: string
 text: string
 kind: ReportKind
-}
+};
 
 function App() {
   const sampleReport: Report = {
     id: '1',
     text: 'Navigation link is broken',
     kind: 'bug',
-  } 
+  };
 
   return (
-    <>
+    <main>
       <div>
         <h2>JacqMarr's Portfolio</h2>
         <img src={snoopy} className="base" alt="Snoopy GitHub"/>
@@ -29,7 +29,7 @@ function App() {
         <p>{sampleReport.text} ({sampleReport.kind})</p>
         </section>
       </div>
-    </>
+    </main>
   )
 }
 
