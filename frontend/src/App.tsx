@@ -11,8 +11,12 @@ kind: ReportKind
 };
 
 function App() {  
+  const initialReports: Report[] = [
+    { id: '1', text: 'Navigation link is broken', kind: 'bug' },
+    { id: '2', text: 'Add dark mode', kind: 'feature' },
+  ];
 
-  const [reports, setReports] = useState<Report[]>([])
+  const [reports, setReports] = useState(initialReports)
   const [newReportText, setNewReportText] = useState('')
 
 
@@ -28,10 +32,7 @@ function App() {
   setNewReportText(''); 
 }
 
-  const initialReports: Report[] = [
-    { id: '1', text: 'Navigation link is broken', kind: 'bug' },
-    { id: '2', text: 'Add dark mode', kind: 'feature' },
-  ];
+  
 
   const sampleReport: Report = {
     id: '1',
