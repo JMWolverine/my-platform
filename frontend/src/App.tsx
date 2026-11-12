@@ -4,21 +4,23 @@ import {useState} from 'react'
 
 
 type ReportKind = 'bug' | 'feature'
+type Priority = 'new' | 'urgent' | 'high' | 'medium' | 'low'
+
 type Report = {
 id: string
 text: string
-kind: ReportKind
+kind: ReportKind,
+priority: Priority;
 };
 
 function App() {  
   const initialReports: Report[] = [
-    { id: '1', text: 'Navigation link is broken', kind: 'bug' },
-    { id: '2', text: 'Add dark mode', kind: 'feature' },
+    { id: '1', text: 'Navigation link is broken', kind: 'bug', priority: 'new' },
+    { id: '2', text: 'Add dark mode', kind: 'feature', priority: 'new' },
   ];
 
   const [reports, setReports] = useState(initialReports)
   const [newReportText, setNewReportText] = useState('')
-
 
   function addReport() {
   const text = newReportText.trim()
@@ -27,6 +29,7 @@ function App() {
     id: crypto.randomUUID(),
     text: text,
     kind: 'bug',
+    priority: 'new',
   };
   setReports([...reports, newReport]);
   setNewReportText(''); 
@@ -38,6 +41,7 @@ function App() {
     id: '1',
     text: 'Navigation link is broken',
     kind: 'bug',
+    priority: 'new'
   };
 
   return (
@@ -59,7 +63,7 @@ function App() {
         <ul>
           {reports.map((report) => (
           <li key={report.id}>
-          {report.text} ({report.kind})
+{report.text} ({report.kind}, {report.priority})
           </li>
           ))}
         </ul>
