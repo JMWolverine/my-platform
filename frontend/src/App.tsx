@@ -1,5 +1,7 @@
 import './App.css'
 import snoopy from './assets/SnoopGitHub.png'
+import {useState} from 'react'
+
 
 type ReportKind = 'bug' | 'feature'
 type Report = {
@@ -8,7 +10,24 @@ text: string
 kind: ReportKind
 };
 
-function App() {
+function App() {  
+
+  const [reports, setReports] = useState<Report[]>([])
+  const [newReportText, setNewReportText] = useState('')
+
+
+  function addReport() {
+  const text = newReportText.trim()
+  if (text.length === 0) return
+  const newReport: Report = {
+    id: crypto.randomUUID(),
+    text: text,
+    kind: 'bug',
+  };
+  setReports([...reports, newReport]);
+  setNewReportText(''); 
+}
+
   const initialReports: Report[] = [
     { id: '1', text: 'Navigation link is broken', kind: 'bug' },
     { id: '2', text: 'Add dark mode', kind: 'feature' },
@@ -31,13 +50,17 @@ function App() {
         <p>This is a test paragraph.</p>
         <section className="report-board">
         <h2>Bugs & Feature Requests</h2>
-        <p>{sampleReport.text} ({sampleReport.kind})</p>
+        
+        <input type="text" value={newReportText} onChange={(event) => setNewReportText(event.target.value)} placeholder="Describe a bug..." aria-label="New bug report"/>
+          <button type="button" onClick={addReport}>
+          Add Bug
+          </button>
         <ul>
-            {initialReports.map((report) => (
-            <li key={report.id}>
-            {report.text} ({report.kind})
-            </li>
-            ))}
+          {reports.map((report) => (
+          <li key={report.id}>
+          {report.text} ({report.kind})
+          </li>
+          ))}
         </ul>
         </section>
       </div>
